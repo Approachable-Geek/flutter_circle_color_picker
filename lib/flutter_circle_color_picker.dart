@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 typedef ColorCodeBuilder = Widget Function(BuildContext context, Color color);
 
@@ -123,6 +122,7 @@ class _CircleColorPickerState extends State<CircleColorPicker>
             onEnded: _onEnded,
             onChanged: (hue) {
               _hueController.value = hue;
+              _lightnessController.value = 0.5;
             },
           ),
           if (!widget.hideLightnessBar)
